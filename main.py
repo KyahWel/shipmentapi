@@ -38,4 +38,4 @@ async def predict(shipment: Shipment):
     X_new = scaler.transform(X_new)
     y_pred = model.predict(X_new)
 
-    return pd.to_datetime(y_pred[0], unit='s')
+    return pd.to_datetime(y_pred[0], unit='s').date()
